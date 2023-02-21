@@ -27,7 +27,7 @@ export function startServer(port) {
     const httpServer = createServer(app);
     const io = new Server(httpServer);
 
-    const PORT = port;
+    const PORT = port || process.env.PORT;
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('public'));
