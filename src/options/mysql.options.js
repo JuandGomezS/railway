@@ -8,7 +8,7 @@ export const options = {
     connection: {
         host: process.env.IP,
         user: process.env.USER,
-        password: '',
+        password: process.env.PASSWORD,
         database: process.env.DATABASE
     },
     debug: true,
